@@ -1,17 +1,19 @@
 #include "main.h"
+
 /**
- *  * main - prints out _putchar
- *   * Return: All good
- *    */
+ *main - print _putchar
+ *Return: All good
+ */
+
 int main(void)
 {
-		char *s = "_putchar";
-
-			for (int i = 0; i < 8; i++)
-				    {
-					    	    _putchar(s[i]);
-						        }
-				_putchar('\n');
-
-					return (0);
-}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\');
+return (0);
