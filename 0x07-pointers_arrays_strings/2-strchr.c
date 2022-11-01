@@ -1,30 +1,29 @@
-#include "main.h"                                                                                                   
-                                                                                                                    
-/**                                                                                                                 
- * _strspn - search a string for a set of bytes                                                                     
- * @s: source string                                                                                                
- * @accept: accepted string                                                                                         
- *                                                                                                                  
- * Return: number of bytes in the init seegment                                                                     
- */                                                                                                                 
-unsigned int _strspn(char *s, char *accept)                                                                         
-{                                                                                                                   
-        unsigned int a = 0, b, t = 0;                                                                               
-                                                                                                                    
-        while (accept[a])                                                                                           
-        {                                                                                                           
-                b = 0;                                                                                              
-                                                                                                                    
-                while (s[b] != 32)                                                                                  
-                {                                                                                                   
-                        if (accept[a] == s[b])                                                                      
-                        {                                                                                           
-                                t++;                                                                                
-                        }                                                                                           
-                        b++;                                                                                        
-                }                                                                                                   
-                a++;                                                                                                
-        }                                                                                                           
-        return (t);                                                                                                 
-}                                                                                                                   
+#include "main.h"
 
+/**
+ * _strchr - locate character in string
+ * @s: source string
+ * @c: character to find
+ *
+ * Return: the string from character found
+ */
+char *_strchr(char *s, char c)
+{
+	int a = 0, b;
+
+	while (s[a])
+	{
+		a++;
+	}
+
+	for (b = 0; b <= a; b++)
+	{
+		if (c == s[b])
+		{
+			s += b;
+			return (s);
+		}
+	}
+
+	return ('\0');
+}
