@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * eevaluate_num - recursion loop
+ * evaluate_num - recursion loop
  * @num: num
- * @iteration: number to iterate
+ * @iterator: number to iterate
  * Return: return 1 or 0
  */
 
