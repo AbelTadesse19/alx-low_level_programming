@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	/*Declaring variables*/
 	int position, total, change, aux;
-	int coins[] = {25, 10, 5, 2, 1} /*array int*/
+	int coins[] = {25, 10, 5, 2, 1}; /*array int*/
 
 	position = total = change = aux = 0;
 
