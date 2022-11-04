@@ -32,7 +32,7 @@ int check_num(char *str)
 
 /**
  * main - prit the number of the progress
- * @argc: Count argument 
+ * @argc: Count argument
  * @argv: Argument
  *
  * Return: Always 0 (success)
