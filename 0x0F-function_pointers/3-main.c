@@ -1,28 +1,39 @@
-#ifndef CALC_H
-#define CALC_H
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "3-calc.h"
 
 /**
- * struct op - struct op
- *
- * @op: The operator
- * @f: The function associated
+ * main - main function
+ * @argc: argument count
+ * @argv: string of arguments in array
+ * Return: 0
  */
-typedef struct op
-{
-	char *op;
-	int (*f)(int a, int b);
-}
-op_t;
 
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int (*get_op_func(char *s)(int, int);
-int (*get_op_func(char *s))(int, int);
-#endif
+int main(int argc, char *argv[])
+{
+	int a, b;
+	int (*o)(int, int);
+
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	o = get_op_func(argv[2]);
+	if (o == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", o(a, b));
+
+	return (0);
+}
