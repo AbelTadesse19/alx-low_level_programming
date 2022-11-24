@@ -1,9 +1,10 @@
-#include "list.h"
+#include <stdlib.h>
 #include <stdio.h>
+#include "lists.h"
 
 /**
- * print_list - prints all the elements of a list_t lists
- * @h: list_t list
+ * print_list - function that prints all the elements of a list_t list
+ * @h: the list_t list
  *
  * Return: number of nodes in h
  */
@@ -26,4 +27,3 @@ size_t print_list(const list_t *h)
 
 	return (nodes);
 }
-
