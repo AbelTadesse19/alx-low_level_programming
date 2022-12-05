@@ -6,10 +6,10 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer - allocate 1024 bytes for a buffer
- * @file: name of the file buffer is storing chars for
+ * create_buffer - Allocates 1024 bytes for a buffer.
+ * @file: The name of the file buffer is storing chars for.
  *
- * Return: pointer to the newly-allocated buffer
+ * Return: A pointer to the newly-allocated buffer.
  */
 
 char *create_buffer(char *file)
@@ -21,17 +21,16 @@ char *create_buffer(char *file)
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO,
-				"ERROR: can't write to %s\n", file);
+			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
 	return (buffer);
 }
 
-
 /**
- * close_file - close file descriptiors
- * @fd: file descriptor to be closed
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
 {
@@ -41,8 +40,7 @@ void close_file(int fd)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "ERROR: Cant close fd %d\n",
-				fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
