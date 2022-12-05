@@ -5,7 +5,7 @@
  * @filename: pointer to the name of the file to create
  * @text_content: pointer to a string to write to the file
  *
- * Return: if the function fails falls - -1
+ * Return: if the function fails - -1
  * otherwise - 1
  */
 
